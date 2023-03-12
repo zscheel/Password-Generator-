@@ -14,6 +14,33 @@ function writePassword() {
 
 }
 
+function generatePassword() {
+    var chars = "";
+    var password = "";
+    content();
+
+    if (lowerCase) {
+        chars = "abcdefghijklmnopqrstuvwxyz"
+    }
+    if (upperCase) {
+        chars = chars + "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+    }
+    if (number) {
+        chars = chars + "1234567890"
+    }
+    if (special) {
+        chars = chars + "!@#$%^&*()"
+    }
+
+    console.log(chars);
+
+    for (var i = 0; i <= length -1; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length))
+    }
+    console.log(password);
+    return password;
+}
+
 function content () {
     length = prompt("How long do you want your password?");
     if (length >=  8 && length <= 128) {
