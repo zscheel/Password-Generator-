@@ -44,8 +44,8 @@ function generatePassword() {
 function content () {
     length = prompt("How long do you want your password?");
     if (length >=  8 && length <= 128) {
-        lowerCase = confirm("Do you want lowercase letters? (y or n)");
-        upperCase = confirm("Do you want uppercase letters? (y or n)");
+        lowerCase = confirm("Do you want lowercase letters?");
+        upperCase = confirm("Do you want uppercase letters?");
         number = confirm("Do you want to include numbers?");
         special = confirm("Do you want special character?");
     } else {
